@@ -1,0 +1,30 @@
+<h3> Article </h3>
+<article>
+	
+			<h3><?= $post['Title'] ?></h3>
+			<p><?= $post['Contents'] ?></p>
+			<p><?= $post['CreationTimestamp'] ?></p>
+			<p><?= $post['FirstName'] ?>
+			<?= $post['LastName'] ?></p>
+			
+			<?php foreach ($commentaire as $commentaire) :?>
+				<p><?= $commentaire['NickName'] ?></p>
+				<p><?= $commentaire['Contents'] ?></p>
+				<p><?= $commentaire['CreationTimestamp'] ?></p>
+			<?php endforeach ?>
+
+</article>		
+
+<h3>Commentaires</h3>
+	<form action="add_comment.php" method="POST">
+		<label for="pseudo">Ton Pseudo:</label>
+		<input type="text" name="pseudo" id="pseudo">
+		<label for id="textarea">Ton commentaire</label>
+		<textarea name="textarea" id="textarea"></textarea>
+		
+		<label for="envoyer">Envoyer</label>
+		<input type="submit" name="envoyer" id="envoyer">
+		<label for="annuler">Annuler</label>
+		<input type="submit" name="annuler" id="annuler">
+	</form>
+

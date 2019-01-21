@@ -1,0 +1,27 @@
+<section>
+			<h3>Commentaires</h3>
+	<form action="add_post.php" method="POST">
+		<label for="Title">Titre:</label>
+		<input type="text" name="Title" id="Title">
+		<label for id="Contents">Article</label>
+		<textarea name="Contents" id="Contents"></textarea>
+	<?php foreach ($post as $value) :?>
+
+		<label for="Author_Id">Auteur: </label>
+		<select name= "Author_Id" id="Author_Id">
+			<option value="Author_Id">John Doe</option>
+		</select>
+	<?php endforeach ?>
+	<?php foreach ($post as $value) :?>
+		<label for="Category_Id">Catégorie:</label>
+		<select name="Category_Id" id="Category_Id">
+			<option value="2">Jeux-Vidéos</option>
+			<option value="1">Voyages</option>
+		</select>
+	<?php endforeach ?>	
+		<label for="envoyer">Envoyer</label>
+		<input type="submit" name="envoyer" id="envoyer">
+		<label for="annuler">Annuler</label>
+		<input type="submit" name="annuler" id="annuler">
+	</form>
+</section>

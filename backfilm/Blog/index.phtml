@@ -1,0 +1,9 @@
+
+<h2>Accueil</h2>
+<ul>
+	<?php foreach ($Article as $value):?>
+	<li>
+	<a href="show_post.php?id=<?=$value['Id']?>"><?=$value['Title']?></a> 
+	</li>
+	<?php endforeach ?>
+</ul>
